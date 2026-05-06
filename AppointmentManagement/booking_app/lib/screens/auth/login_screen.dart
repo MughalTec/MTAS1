@@ -6,7 +6,6 @@ import '../../config/theme.dart';
 import '../../providers/auth_provider.dart';
 import '../../utils/validators.dart';
 import '../../widgets/custom_button.dart';
-import '../../services/api.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -21,24 +20,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final _passwordController = TextEditingController();
   bool _obscurePassword = true;
   bool _isLoading = false;
-
-@override
-void initState() {
-  super.initState();
-  loadData();
-}
-
-Future<void> loadData() async {
-  try 
-  {
-    var data = await ApiService.getUsers();
-    print(data);
-  } 
-  catch (e) 
-  {
-    print('Error: $e');
-  }
-}
 
 @override
 void dispose() {

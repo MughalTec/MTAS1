@@ -41,42 +41,6 @@ class _ClientDetailsScreenState extends State<ClientDetailsScreen> {
     super.dispose();
   }
 
-  Future<void> _confirmBooking() async {
-    if (!_formKey.currentState!.validate()) return;
-
-    setState(() => _isLoading = true);
-
-    try {
-      final bookingService = BookingService();
-      final booking = await bookingService.createBooking(
-        provider: widget.provider,
-        service: widget.service,
-        startTime: widget.selectedSlot,
-        clientName: _nameController.text.trim(),
-        clientEmail: _emailController.text.trim(),
-        clientPhone: _phoneController.text.trim(),
-        clientNotes: _notesController.text.trim(),
-      );
-
-      if (mounted) {
-        context.pushReplacement(
-          '/book/${widget.provider.bookingPageSlug}/confirmation',
-          extra: {'booking': booking, 'provider': widget.provider},
-        );
-      }
-    } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Booking failed: ${e.toString()}'),
-            backgroundColor: AppTheme.error,
-          ),
-        );
-      }
-    } finally {
-      if (mounted) setState(() => _isLoading = false);
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -211,11 +175,11 @@ class _ClientDetailsScreenState extends State<ClientDetailsScreen> {
           Container(
             padding: const EdgeInsets.all(16),
             color: Colors.white,
-            child: CustomButton(
-              label: 'Confirm Booking',
-              isLoading: _isLoading,
-              onPressed: _confirmBooking,
-            ),
+    // child: CustomButton(
+    //  label: 'Confirm Booking',
+    //  isLoading: _isLoading,
+
+            //),
           ),
         ],
       ),

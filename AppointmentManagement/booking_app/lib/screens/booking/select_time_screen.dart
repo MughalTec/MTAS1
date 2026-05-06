@@ -43,16 +43,17 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
     });
 
     try {
-      final bookingService = BookingService();
-      final slots = await bookingService.getAvailableSlots(
-        providerId: widget.provider.id,
-        service: widget.service,
-        date: day,
-      );
-      setState(() {
-        _availableSlots = slots;
-        _isLoadingSlots = false;
-      });
+      final BookingSer = bookingService();
+      bookingService.getbookings();
+     // final slots = await BookingSer.getAvailableSlots(
+      //  providerId: widget.provider.id,
+       // service: widget.service,
+       // date: day,
+     // );
+    //  setState(() {
+      //  _availableSlots = slots;
+      // _isLoadingSlots = false;
+      // });
     } catch (e) {
       setState(() => _isLoadingSlots = false);
     }
