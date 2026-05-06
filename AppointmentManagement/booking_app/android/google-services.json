@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "256693909916",
+    "project_id": "mughal-tech-booking",
+    "storage_bucket": "mughal-tech-booking.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256693909916:android:a9fb8e36b2b69eee503059",
+        "android_client_info": {
+          "package_name": "com.example.booking_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU6IGW2D42KdM5b1Ytn9D_txOmfODNA14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
