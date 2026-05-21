@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "992988980450",
+    "project_id": "mtas-booking",
+    "storage_bucket": "mtas-booking.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992988980450:android:f6c7a930a03c91cd906abb",
+        "android_client_info": {
+          "package_name": "com.example.booking_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992988980450-517kpm8b5lhrhjm9ud5jnldm386jv7vt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgNJaItXurpdTHCAr_kulH3sl_0_4Vpkk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992988980450-517kpm8b5lhrhjm9ud5jnldm386jv7vt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
